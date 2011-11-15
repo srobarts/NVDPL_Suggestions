@@ -36,12 +36,14 @@
 		              		<span class="uneditable-input"><?php echo $row->timestamp; ?></span>
 		            	</div>
 		          	</div><!-- /clearfix -->
-		          	<div class="clearfix">
-		            	<label>Suggestion:</label>
-		            	<div class="input">
-		              		<span class="uneditable-input"><?php echo $row->suggestion; ?></span>
-		            	</div>
-		          	</div><!-- /clearfix -->
+				  	<div class="clearfix">
+		            <label for="disabledInput">Suggestion:</label>
+		            <div class="input">
+		              <textarea class="xxlarge" name="textarea" id="textarea" rows="3" disabled>
+		              		<?php echo $row->suggestion; ?>
+		              </textarea>
+		            </div>
+		          </div><!-- /clearfix -->
 			</fieldset>
 			</form>
 	<?php 
@@ -60,8 +62,8 @@
 			<h2>Existing Comments:</h2>
 			<table class="zebra-striped">
 				<tr>
-					<th width="100">Comment Id</th>
-					<th width="100">Suggestion Id</th>
+					<!-- <th width="100">Comment Id</th> -->
+					<!-- <th width="100">Suggestion Id</th> -->
 					<th width="200">Submitter</th>
 					<th width="200">Timestamp</th>
 					<th width="400">Comment</th>
@@ -74,12 +76,10 @@
 				foreach($comments->result() as $row)
 				{
 					echo "<tr>";
-					$uri_seg = "comments/view_comment/" . $row->id;
-					echo "<td>" . $row->id . "</td>";
-					echo "<td>" . $row->suggestionId . "</td>";
-					echo "<td>";
-					echo anchor($uri_seg, $row->staffName);
-					echo "</td>";
+					//$uri_seg = "comments/view_comment/" . $row->id;
+					//echo "<td>" . $row->id . "</td>";
+					//echo "<td>" . $row->suggestionId . "</td>";
+					echo "<td>" . $row->staffName . "</td>";
 					echo "<td>" . $row->timestamp . "</td>";
 					echo "<td>" . $row->comment . "</td>";
 					echo "</tr>";

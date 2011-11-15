@@ -55,15 +55,25 @@ class Comments extends CI_Controller {
     {
         $suggestionId = $this->input->post('suggestionId');
 
-        $data = array(
+        $action = $this->input->post('action'); //Value of the submit button
+        if($action == "Cancel")
+        {
+            redirect('main');
+        }
+        else if($action == "Add Note")
+        {
+            $data = array(
                 'suggestionId' => $this->input->post('suggestionId'),
                 'staffName' => $this->input->post('staffName'),
                 'timestamp' => $this->input->post('timestamp'),
                 'comment' => $this->input->post('comment'),
-        );
+            );
 
-        $this->comments_model->add_comment($data);
-        redirect('main/edit_suggestion/' . $suggestionId);
+            $this->comments_model->add_comment($data);
+            redirect('main/edit_suggestion/' . $suggestionId);
+        }
+
+        
     }
 
 }

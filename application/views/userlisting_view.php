@@ -5,10 +5,13 @@
 				<h2>Manage Users</h2>
 				
 				<?php
-					//add user
-					$uri_seg = "users/add_user" . "/" . 1;
-					echo anchor($uri_seg, 'Add User', 'class="btn"');
-					echo "<br><br>";
+					if( ($this->session->userdata('staffName') == 'Administrator') )
+					{
+						//add user
+						$uri_seg = "users/add_user" . "/" . 1;
+						echo anchor($uri_seg, 'Add User', 'class="btn"');
+						echo "<br><br>";
+					}
 				?>
 
 

@@ -43,7 +43,8 @@
 			  	</div><!-- /clearfix -->
 		
 	<div class="actions">
-    	<input type="submit" class="btn primary" value="Add Note">&nbsp;<button type="reset" class="btn">Cancel</button>
+    	<input type="submit" class="btn primary" name="action" value="Add Note">&nbsp;
+    	<button type="submit" class="btn" name="action" value="Cancel">Cancel</button>
    	</div>
 
    	</fieldset>

@@ -17,13 +17,13 @@
 				<div class="clearfix">
 					<label for="userFirstName">Staff Name:</label>
 					<div class="input">
-						<input class="input" name="userFirstName" id="userFirstName" size="30" type="text" />
+						<input class="input" name="staffName" id="staffName" size="30" type="text" />
 					</div>
 			  	</div><!-- /clearfix -->
 				<div class="clearfix">
 					<label for="userEmail">Staff Email:</label>
 					<div class="input">
-						<input class="input" id="userEmail" name="userEmail" size="30" type="text" />
+						<input class="input" id="staffEmail" name="staffEmail" size="30" type="text" />
 					</div>
 			  	</div><!-- /clearfix -->
 				<div class="clearfix">
@@ -35,8 +35,10 @@
 		</fieldset>
 		
 		<div class="actions">
-        	<input type="submit" class="btn primary" value="Add User">&nbsp;<button type="reset" class="btn">Cancel</button>
+        	<input type="submit" class="btn primary" name="action" value="Add User">&nbsp;
+        	<button type="submit" class="btn" name="action" value="Cancel">Cancel</button>
        	</div>
+    </form>
        	
 </div>
 </div>
