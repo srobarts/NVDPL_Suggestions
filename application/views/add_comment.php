@@ -28,9 +28,9 @@
 				<div class="clearfix"> 
 					<label for="timestamp">Timestamp:</label>
 					<div class="input">
-		              	<span class="uneditable-input"><?php echo( date("m/d/y") ); ?></span>
+		              	<span class="uneditable-input"><?php echo( date("Y-m-d H:i:s") ); ?></span>
 		            </div>
-		            <input type="hidden" name="timestamp" id="timestamp" value="<?php echo( date("m/d/y") ); ?>" />
+		            <input type="hidden" name="timestamp" id="timestamp" value="<?php echo( date("Y-m-d H:i:s") ); ?>" />
 			  	</div><!-- /clearfix -->
 			  	<div class="clearfix">
 				<label for="textarea">Comment / Note</label>

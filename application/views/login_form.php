@@ -25,13 +25,13 @@
           	<?php echo form_open('login/validate'); ?>
           		<fieldset>
 						<div class="clearfix">
-							<label for="userFirstName">NVDPL Email Address:</label>
+							<label for="input">NVDPL Email Address:</label>
 							<div class="input">
 								<input class="input" name="emailAddress" id="emailAddress" size="30" type="text" />
 							</div>
 					  	</div><!-- /clearfix -->
 						<div class="clearfix">
-							<label for="userLastName">Password:</label>
+							<label for="input">Password:</label>
 							<div class="input">
 								<input class="input" id="password" name="password" size="30" type="password" />
 							</div>

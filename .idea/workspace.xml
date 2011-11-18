@@ -52,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit_suggestion_view.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="edit_suggestion_view.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/edit_suggestion_view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.30312034">
+            <state line="10" column="81" selection-start="256" selection-end="256" vertical-scroll-proportion="-6.5384617">
               <folding />
             </state>
           </provider>
@@ -70,10 +70,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add_comment.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="add_comment.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/add_comment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="26" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-15.269231">
+            <state line="6" column="46" selection-start="123" selection-end="123" vertical-scroll-proportion="-0.07727273">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comments.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/comments.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="59" column="9" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,6 +107,7 @@
         <option value="$PROJECT_DIR$/application/controllers/main.php" />
         <option value="$PROJECT_DIR$/application/views/login_form.php" />
         <option value="$PROJECT_DIR$/application/views/edit_suggestion_view.php" />
+        <option value="$PROJECT_DIR$/application/views/add_comment.php" />
       </list>
     </option>
   </component>
@@ -334,7 +344,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -342,7 +352,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1551584" sideWeight="0.98074746" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15434606" sideWeight="0.98074746" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -417,13 +427,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/add_comment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="26" selection-start="1588" selection-end="1588" vertical-scroll-proportion="-15.269231">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/login_form.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="32" column="46" selection-start="1097" selection-end="1097" vertical-scroll-proportion="-17.0">
@@ -440,7 +443,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/edit_suggestion_view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="264" selection-end="264" vertical-scroll-proportion="0.30312034">
+        <state line="10" column="81" selection-start="256" selection-end="256" vertical-scroll-proportion="-6.5384617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/comments.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="9" selection-start="1399" selection-end="1399" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/add_comment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="46" selection-start="123" selection-end="123" vertical-scroll-proportion="-0.07727273">
           <folding />
         </state>
       </provider>
