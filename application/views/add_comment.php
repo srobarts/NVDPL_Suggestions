@@ -2,7 +2,7 @@
 <div class="row">
 <div class="span8 offset4">
 
-<h2>Add Comment / Note</h2>
+<h2>Add Management Note</h2>
 
 <p class="page_title" title="suggestions"></p>
 
@@ -16,7 +16,7 @@
 
 	<?php echo form_open('comments/process_add_comment'); ?>
 		<fieldset>
-	  		<legend>Add Comment / Note:</legend>
+	  		<!-- <legend>Add Management Note:</legend> -->
 	  			<input type="hidden" name="suggestionId" id="suggestionId" value="<?php echo( $this->uri->segment(3) ); ?>" />
 				<div class="clearfix">
 					<label for="staffName">Staff Name:</label>
@@ -33,9 +33,9 @@
 		            <input type="hidden" name="timestamp" id="timestamp" value="<?php echo( date("Y-m-d H:i:s") ); ?>" />
 			  	</div><!-- /clearfix -->
 			  	<div class="clearfix">
-				<label for="textarea">Comment / Note</label>
+				<label for="textarea">Note</label>
 				<div class="input">
-					<textarea class="xxlarge" id="comment" name="comment" rows="3"></textarea>
+					<textarea class="xxlarge" id="comment" name="comment" rows="8"></textarea>
 				  		<span class="help-block">
 							Enter any notes or comments above related to the suggestion.
 				  		</span>

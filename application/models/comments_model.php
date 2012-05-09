@@ -15,6 +15,13 @@ class comments_model extends CI_Model {
         return $query;
 	}
 
+	function getComment($commentId)
+	{
+		$this->db->where('id', $commentId);
+		$query = $this->db->get('comments');
+        return $query;
+	}
+
 	function add_comment($data)
 	{
 		$this->db->insert('comments', $data);
@@ -27,5 +34,13 @@ class comments_model extends CI_Model {
 		$query = $this->db->get('comments');
         return $query;
 	}
+
+	function edit_comment($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('comments', $data);
+        return;
+	}
+
 
 }

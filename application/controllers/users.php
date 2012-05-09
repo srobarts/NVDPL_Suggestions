@@ -25,6 +25,17 @@ class Users extends  CI_Controller {
         $this->load->view('common/template', $data);
 	}
 
+	function is_logged_in()
+    {
+        //function to check if user is logged in
+        $is_logged_in = $this->session->userdata('is_logged_in');
+
+        if(!isset($is_logged_in) || $is_logged_in != true )
+        {
+            $this->load->view('login_form');
+        }
+    }
+
 	function add_user()
 	{
 		if($query = $this->users_model->getAll())

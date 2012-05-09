@@ -35,4 +35,41 @@ class suggestions_model extends CI_Model {
         return;
 	}
 
+	function save_edited_suggestion($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('suggestions', $data);
+        return;
+	}
+
+	function save_mgmt_decision($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('suggestions', $data);
+        return;
+	}
+
+	function set_comment_flag($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('suggestions', $data);
+        return;
+	}
+
+	function set_response_flag($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('suggestions', $data);
+        return;
+	}
+
+	function set_final_flag($data)
+	{
+		$this->db->where('id', $data['id']);
+        $this->db->update('suggestions', $data);
+        return;
+	}
+
+
+
 }

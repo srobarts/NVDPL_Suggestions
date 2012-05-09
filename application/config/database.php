@@ -49,7 +49,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '127.0.0.1:3306';
 $db['default']['username'] = 'root';
-$db['default']['password'] = '';
+$db['default']['password'] = 'hal9000';
 $db['default']['database'] = 'suggestions';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

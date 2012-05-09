@@ -7,6 +7,7 @@ class Comments extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('comments_model');
+        $this->load->model('suggestions_model');
         $this->load->model('users_model');
 	}
 
@@ -40,6 +41,17 @@ class Comments extends CI_Controller {
         $this->load->view('/common/template', $data);
     }
 
+    function view_single_comment($commentId)
+    {
+        if( $query = $this->comments_model->getComment($commentId) )
+        {
+            $data['comments'] = $query;
+        }
+
+        $data['main_content'] = 'edit_comment_view';
+        $this->load->view('/common/template', $data);
+    }
+
     function add_comment($suggestionId)
     {
         if($query = $this->users_model->getAll())
@@ -63,6 +75,12 @@ class Comments extends CI_Controller {
         else if($action == "Add Note")
         {
             $data = array(
+                'id' => $suggestionId,
+                'messageStatus' => 1
+            );
+            $this->suggestions_model->set_comment_flag($data);
+
+            $data = array(
                 'suggestionId' => $this->input->post('suggestionId'),
                 'staffName' => $this->input->post('staffName'),
                 'timestamp' => $this->input->post('timestamp'),
@@ -72,8 +90,28 @@ class Comments extends CI_Controller {
             $this->comments_model->add_comment($data);
             redirect('main/edit_suggestion/' . $suggestionId);
         }
+    }
 
-        
+    function process_edit_comment()
+    {
+        $commentId = $this->input->post('commentId');
+
+        $action = $this->input->post('action'); //value of the submit button
+        if($action == "Cancel")
+        {
+            redirect('main');
+        }
+        else if($action == "Edit Note")
+        {
+            $data = array(
+                'id' => $this->input->post('commentId'),
+                'comment' => $this->input->post('comment'),
+                'staffName' => $this->input->post('staffName')
+            );
+
+            $this->comments_model->edit_comment($data);
+            redirect('main');
+        }
     }
 
 }
